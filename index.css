@@ -1,0 +1,79 @@
+* {
+    font-family: sans-serif
+}
+
+/**************** Cabecera ******************/
+header {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header_logo-imagenLogo {
+    height: 110px;
+    width: 120px;
+    margin-left: 80px;
+}
+
+.header_busqueda {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-right: 100px;
+    width: 300px;
+}
+
+.header_busqueda-imagenLupa {
+    height: 60px;
+    width: 60px;
+}
+
+.header_busqueda-SignUp {
+    color: black;
+    text-decoration: none;
+}
+
+.header_busqueda-buttonLogin {
+    border-radius: 10px;
+    border-style: initial;
+    background-color: salmon;
+    color: white;
+    height: 30px;
+    outline: none;
+    width: 72px;
+}
+
+/************ Barra de navegación ***************/
+.navegacion {
+    align-items: center;
+    background-color: midnightblue;
+    display: flex;
+    flex-direction: row;
+    height: 70px;
+    justify-content: space-around;
+    
+}
+
+.navegacion_selectores {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 700px;
+}
+
+.navegacion_selectores > a {
+    color: white;
+    outline: none;
+    text-decoration: none;
+}
+
+/*************** Pie de pagina *****************/
+.footer {
+    
+}
+
+.footer_selectores {
+
+}
