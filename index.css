@@ -48,7 +48,7 @@ header {
 /************ Barra de navegación ***************/
 .navegacion {
     align-items: center;
-    background-color: midnightblue;
+    background-color: #30475e;
     display: flex;
     flex-direction: row;
     height: 70px;
