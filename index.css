@@ -38,7 +38,7 @@ header {
 .header_busqueda-buttonLogin {
     border-radius: 10px;
     border-style: initial;
-    background-color: salmon;
+    background-color: #ff7e67;
     color: white;
     height: 30px;
     outline: none;
@@ -69,11 +69,59 @@ header {
     text-decoration: none;
 }
 
+/****************** posts **************/
+.posts {
+    height: 65em;
+}
+
 /*************** Pie de pagina *****************/
+.line {
+    margin-left: 6em;
+    margin-right: 6em;
+}
+
 .footer {
-    
+    display: flex;
+    flex-direction: row;
+    height: 70px;
+    justify-content: space-around;
 }
 
 .footer_selectores {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 450px;
+}
 
+.footer_selectores > a {
+    align-items: center;
+    color: gray;
+    display: flex;
+    outline: none;
+    text-decoration: none;
+}
+
+.icon {
+    margin-right: 8px;
+    height: 16px;
+    width: 16px
+}
+
+/************* media ****************/
+
+@media (max-width: 600px) {
+    .header_logo-imagenLogo {
+        display: none;
+    }
+
+    .line {
+        margin-bottom: 40px;
+    }
+
+    .footer_selectores {
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
 }
