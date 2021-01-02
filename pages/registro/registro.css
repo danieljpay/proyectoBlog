@@ -1,0 +1,60 @@
+.posts_container_form {
+    margin: 50px 550px;
+    align-items: center;
+    border: 1px solid;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.post_container_form-titulo {
+    margin-bottom: 80px;
+    margin-top: 20px;
+    margin-right: 380px;
+}
+
+.post_container_form_inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+.post_container_form_inputs > div {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 35px;
+    width: 400px;
+}
+
+.post_container_form_inputs > div > input {
+    border-bottom: 2px solid;
+    border-left: 0ch;
+    border-right: 0ch;
+    border-top: 0ch;
+    font-size: medium;
+    height: 25px;
+    outline: none;
+    width: 250px;
+}
+
+.post_container_form_radios {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    width: 200px;
+}
+
+.post_container_form-button {
+    margin-bottom: 100px;
+    margin-top: 20px;
+}
+
+.post_container_form-button {
+    border-radius: 6px;
+    border-style: initial;
+    background-color: #ff7e67;
+    color: white;
+    height: 35px;
+    outline: none;
+    width: 150px;
+}
