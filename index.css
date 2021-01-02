@@ -122,6 +122,14 @@ header {
 
     .footer_selectores {
         flex-direction: column;
-        margin-bottom: 10px;
+        margin-bottom: 25px;
+    }
+
+    .footer_selectores > a {
+        margin-bottom: 5px;
+    }
+
+    .footer_selectores > span {
+        display: none;
     }
 }
