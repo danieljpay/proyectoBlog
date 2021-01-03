@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
     <link rel="stylesheet" href="../layout/index.css">
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="contactanos.css">
 </head>
 <body>
     <header>
@@ -17,45 +17,55 @@
         <div class="header_busqueda">
             <a href="../busqueda/index.html"><img alt="icono de buscar" class="header_busqueda-imagenLupa" src="../../assets/iconoLupa.png"></a>
             <a class="header_busqueda-SignUp" href="../registro/registro.html">Sign up</a> |
-            <button class="header_busqueda-buttonLogin" id="Login">Login</button>
+            <button class="header_busqueda-buttonLogin" href="../login/login.html" id="Login">Login</button>
         </div>
     </header>
     <nav class="navegacion">
         <div class="navegacion_selectores">
-            <a href="./">Inicio</a>
+            <a href="../inicio/" >Inicio</a>
             <a href="../about/" >Sobre mí</a>
             <a href="../contactanos/" >Contacto</a>
         </div>
     </nav>  
-    <main>
-        <div>
-            <h1>Últimas publicaciones</h1>
-            <div class="container">
-                <article>
-                    <img src="./assets/image.png" alt="">
-                    <div>
-                        <h3>Titulo de la publicación</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus neque voluptatibus error non nesciunt impedit rem ullam eius velit natus inventore, minima consequatur eum molestias, doloremque porro eveniet ratione animi!</p>
-                        <a href="../post/post.html">Ver publicación...</a>
+    <main class="posts">
+        <div class="posts_container">
+            <form class="posts_container_form" action="">
+                <div class="post_container_form-titulo">
+                    <h2>Cont&aacute;ctanos</h2>
+                </div>
+                <div class="post_container_form_inputs">
+                    <div id="simpleTextForm">
+                        <h5>Si est&aacute; interesado en contactarnos, puede rellenar el formulario
+                            y esperar su respuesta en las pr&oacute;ximas 24 hrs.
+                            O puede enviarnos un correo 
+                            <a href="mailto:teampimpollos@outlook.es?Subject=Interesado%20en%20sus%20servicios">haciendo click aqu&iacute;.</a> 
+                        </h5>
                     </div>
-                </article>
-                <article>
-                    <img src="./assets/image.png" alt="">
                     <div>
-                        <h3>Titulo de la publicación</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus neque voluptatibus error non nesciunt impedit rem ullam eius velit natus inventore, minima consequatur eum molestias, doloremque porro eveniet ratione animi!</p>
-                        <a href="../post/post.html">Ver publicación...</a>
+                        <label>Nombre</label>
+                        <input type="text">
                     </div>
-                </article>
-                <article>
-                    <img src="./assets/image.png" alt="">
                     <div>
-                        <h3>Titulo de la publicación</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus neque voluptatibus error non nesciunt impedit rem ullam eius velit natus inventore, minima consequatur eum molestias, doloremque porro eveniet ratione animi!</p>
-                        <a href="../post/post.html">Ver publicación...</a>
+                        <label>Usuario</label>
+                        <input type="text">
                     </div>
-                </article>
-            </div>
+                    <div>
+                        <label>Correo</label>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <label>Asunto</label>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <label>Descripci&oacute;n</label>
+                        <textarea id="description" rows="10"></textarea>
+                    </div>
+                </div>
+                <div class="post_container_form_button">
+                    <input type="submit" class="post_container_form-button" value="Enviar">
+                </div>
+            </form>
         </div>
     </main>
     <hr class="line">
@@ -67,6 +77,6 @@
             <span>|</span><a href="https://www.youtube.com"><img src="../../assets/iconoYoutube.png" alt="iconoYoutube" class="icon">Youtube</a>
         </div>
     </footer>
-    <script defer src="../layout/index.js"></script>
+    <script defer src="contactanos.js"></script>
 </body>
 </html>
