@@ -50,10 +50,17 @@
     border-radius: 5px;
     box-shadow: 1px 1px 4px grey; 
     margin: 3vh;
-    height: 20vh;
     padding: 2vh;
     display: flex;
     flex-direction: row;
+    text-align: justify;
+}
+
+.comments-title {
+    width: fit-content;
+    align-self: center;
+    box-shadow: none;
+    border-collapse: collapse;
 }
 
 .comments_container > div > .perfil {
@@ -61,6 +68,7 @@
     flex-direction: column;
     font-size: small;
     margin: 0.8vh;
+    text-align: center;
 }
 
 .comments_container > div > .perfil > img {
@@ -71,6 +79,38 @@
 
 .comment_containt > label{
     
+}
+
+#commentAdder {
+    position:relative;
+}
+
+.fake-textarea {
+    border: none;
+    border-bottom: 1px solid;
+    width: 1000px;
+    padding: .5rem;
+    min-height: 3rem;
+}
+
+.fake-textarea:empty::before {
+    position: absolute;
+    content: "Escribe aquí tu comentario...";
+}
+
+#comment {
+    display: none;
+}
+
+#sendCommentButton {
+    margin-left: 5px;
+    border-radius: 2px;
+    border: none;
+    height: 40%;
+    margin-top: 60%;
+    background-color:  #ff7e67;
+    color: white;
+    font-family: sans-serif;
 }
 
 @media screen and (max-width: 715px) {
