@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../layout/index.css">
     <link rel="stylesheet" href="./post.css">
+    <script src="post.js"></script>
     <title>Publicación</title>
 </head>
 <body>
@@ -24,7 +25,6 @@
         <div class="navegacion_selectores">
             <a href="../inicio/" >Inicio</a>
             <a href="../about/" >Sobre mí</a>
-            <a href="" >Blog</a>
             <a href="" >Contacto</a>
         </div>
     </nav>  
@@ -47,17 +47,17 @@
             </div>
         </div>
         <div class="comments">
-            <div class="comments-title">
-                <h2>Comentarios</h2>
-            </div>
-            <div class="comments_container">
+            <div class="comments_container" id="c_cont">
+                <div class="comments-title">
+                    <h2>Comentarios</h2>
+                </div>
                 <div>
                     <div class="perfil">
                         <img src="./assets/userAlex.jpg" alt="">
                         <label for="">Alejandro Torre</label>
                     </div>
                     <div class="comment_containt">
-                        <p>Es realmente interesante su posición respecto a la tendencia k-pop de nuestra generación ya que el coral blanco o el ambiente que estamos manejando, lo estamos contaminando de una manera inigmi, i, im, inimaginablemente, inig, inigmante. Esto quiere decir que el coral blanco se está maltratando, eh, pues esas algas rojas. Eh, las algas verde puede servir como combustible. El carros sólo necesitamos el petróleo realmente y si supiéramos manejar un buen gobierno, no necesitamo nada solar lenguas náhual y eso, no metemos nada en aztecas porque si son los que conservan todo. Y si conserváramos todo bosques, flores, selvas, nuestros huertos, nuestras calles fueran kioscos? </p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget dui condimentum, euismod turpis euismod, ultricies mauris. Etiam condimentum egestas massa facilisis feugiat. Sed dapibus justo in ipsum posuere aliquet. </p>
                         <label for="">02/01/2020</label>
                     </div>
                 </div>
@@ -67,10 +67,39 @@
                         <label for="">Jimmy Ojeda</label>
                     </div>
                     <div class="comment_containt">
-                        <p>Que chingue a su madre</p>
+                        <p>Duis ac est non lorem pulvinar luctus. Vestibulum a ante a nibh mollis facilisis. Suspendisse potenti. In tellus nulla, tempus eget justo et, accumsan euismod diam. Cras non orci in erat accumsan venenatis eu quis turpis. Donec ultricies, nisl sed vulputate fermentum, orci metus accumsan orci, in tincidunt erat elit nec magna.</p>
                         <label for="">02/01/2020</label>
                     </div>
                 </div>
+                <div>
+                    <div class="perfil">
+                        <img src="./assets/userDaniel.jpg" alt="">
+                        <label for="">Daniel Pérez</label>
+                    </div>
+                    <div class="comment_containt">
+                        <p>Maecenas pretium non urna at mollis. Curabitur nec pretium nisi. Fusce tortor neque, vestibulum in tincidunt sed, mattis vitae ipsum. Mauris in dapibus ligula. Morbi suscipit dictum lorem quis fringilla. Pellentesque id justo consectetur, convallis erat non, sodales orci. Sed ut sem ut sem porttitor commodo. Donec fringilla orci et placerat blandit. Nunc id ligula nisi. Integer dictum, mi sed venenatis tincidunt, diam ipsum aliquam lectus, vitae imperdiet lacus massa quis est. Etiam tempor enim sed porttitor ultricies. Fusce ullamcorper eu arcu vitae semper. Proin a neque ut tellus pellentesque sollicitudin commodo et mauris. Donec ultricies, nisl sed vulputate fermentum, orci metus accumsan orci, in tincidunt erat elit nec magna. Fusce quis maximus augue, id condimentum tellus. In hac habitasse platea dictumst. Mauris aliquet aliquam augue, fringilla mollis neque semper vitae. Nam nunc mi, placerat id pulvinar in, congue ut orci. Quisque tristique mauris sed urna aliquet mollis. Donec malesuada porta metus vitae dictum. Curabitur at faucibus metus. Sed ut lacus ante. Aliquam a bibendum nisi.</p>
+                        <label for="">02/01/2020</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="comments_container" id="commentAdder">
+                <div>
+                    <div class="perfil">
+                        <img src="./assets/userAnonimus.jpg" alt="">
+                        <label for="">Usuario anonimo</label>
+                    </div>
+                    <div class="comment_containt">
+                        <!-- Falso y edita el usuario -->
+                        <div contenteditable class="fake-textarea" id="fakeTextArea" oninput="document.querySelector('#comment').textContent = this.innerText"></div>
+                        <!-- Real y oculto -->
+                        <textarea id="comment"></textarea>
+                    </div>
+                    <div>
+                        <input type="button" value="Enviar" name="sendCommentButton" id="sendCommentButton" onclick="javascript:addComment()">
+                    </div>
+                </div>
+                
             </div>
         </div>
     </main>
