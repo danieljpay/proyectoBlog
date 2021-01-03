@@ -39,6 +39,7 @@
     box-shadow: 1px 1px 4px grey;    
     margin: 50px auto;
     max-width: 1200px;
+    width: 100%;
 }
 
 .comments_container {
@@ -48,12 +49,13 @@
 
 .comments_container > div {
     border-radius: 5px;
-    box-shadow: 1px 1px 4px grey; 
+    box-shadow: 1px 1px 4px grey;
     margin: 3vh;
     padding: 2vh;
     display: flex;
     flex-direction: row;
     text-align: justify;
+    word-wrap: break-word;
 }
 
 .comments-title {
@@ -69,6 +71,8 @@
     font-size: small;
     margin: 0.8vh;
     text-align: center;
+    word-wrap: break-word;
+    width: 5%;
 }
 
 .comments_container > div > .perfil > img {
@@ -86,28 +90,28 @@
 }
 
 .fake-textarea {
-    border: none;
     border-bottom: 1px solid;
-    width: 1000px;
+    margin: 0.8vh;
+    max-width: 70vw;
     padding: .5rem;
     min-height: 3rem;
 }
 
 .fake-textarea:empty::before {
-    position: absolute;
     content: "Escribe aquí tu comentario...";
 }
 
-#comment {
+#commentAreaInvisible {
     display: none;
 }
 
 #sendCommentButton {
-    margin-left: 5px;
     border-radius: 2px;
     border: none;
-    height: 40%;
-    margin-top: 60%;
+    height: 8vh;
+    margin-top: 30%;
+    margin-left: 4vh;
+    margin-right: 0.8vh;
     background-color:  #ff7e67;
     color: white;
     font-family: sans-serif;
@@ -120,5 +124,28 @@
 
     .post_container-imagen > img {
         max-width: 100%;
+    }
+
+    .comments_container > div > .perfil > img {
+        height: 4vh;
+        width: 4vw;
+    }
+
+    .comments_container > div > .perfil {
+        text-align: left;
+        margin: 0.6vh;
+        width: 10vw;
+    }
+
+    .fake-textarea {
+        max-width: 45vw;
+    }
+
+    #sendCommentButton {
+        margin-left: 2vh;
+    }
+
+    .comments_container > div {
+        font-size: small;
     }
 }
