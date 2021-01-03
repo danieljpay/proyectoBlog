@@ -6,7 +6,7 @@ var year = date.getFullYear();
 function addComment (){
 
     var commentContainer = document.getElementById("c_cont");
-    var comment = document.getElementById("comment");
+    var comment = document.getElementById("commentAreaInvisible");
     var fakeTextArea = document.getElementById("fakeTextArea");
     
     if (comment.textContent.length > 0) {

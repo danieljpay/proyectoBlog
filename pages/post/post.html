@@ -91,9 +91,9 @@
                     </div>
                     <div class="comment_containt">
                         <!-- Falso y edita el usuario -->
-                        <div contenteditable class="fake-textarea" id="fakeTextArea" oninput="document.querySelector('#comment').textContent = this.innerText"></div>
+                        <div contenteditable class="fake-textarea" id="fakeTextArea" oninput="document.querySelector('#commentAreaInvisible').textContent = this.innerText"></div>
                         <!-- Real y oculto -->
-                        <textarea id="comment"></textarea>
+                        <textarea id="commentAreaInvisible"></textarea>
                     </div>
                     <div>
                         <input type="button" value="Enviar" name="sendCommentButton" id="sendCommentButton" onclick="javascript:addComment()">
