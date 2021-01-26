@@ -16,13 +16,35 @@ header {
     width: 120px;
 }
 
+#busqueda {
+    display: none;
+}
+
+#inputBusqueda {
+    border-radius: 10px;
+    border-style: initial black;
+    height: 22px;
+    outline: none;
+    width: 8vw;
+}
+
+#buttonBusqueda {
+    border-radius: 10px;
+    border-style: initial;
+    background-color: #ff7e67;
+    color: white;
+    height: 30px;
+    outline: none;
+    width: 65px;
+}
+
 .header_busqueda {
     align-items: center;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     margin-right: 100px;
-    width: 300px;
+    width: 450px;
 }
 
 .header_busqueda-imagenLupa {
