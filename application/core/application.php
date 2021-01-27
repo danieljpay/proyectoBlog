@@ -23,8 +23,8 @@ class Application
         // check for controller: no controller given ? then load start-page
         if (!$this->url_controller) {
 
-            require APP . 'controller/home.php';
-            $page = new Home();
+            require APP . 'controller/inicio.php';
+            $page = new Inicio();
             $page->index();
 
         } elseif (file_exists(APP . 'controller/' . $this->url_controller . '.php')) {
