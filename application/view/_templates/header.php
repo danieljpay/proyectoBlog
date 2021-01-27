@@ -15,9 +15,11 @@
             </a>
         </div>
         <div class="header_busqueda">
-        <div id="busqueda">
-                <input id="inputBusqueda" type="text" />
-                <button id="buttonBusqueda">Buscar</button>
+            <div id="busqueda">
+                <form action="<?php echo URL; ?>buscar" method="get">
+                    <input id="inputBusqueda" name="query" type="text" required/>
+                    <button type="submit" id="buttonBusqueda">Buscar</button>
+                </form>
             </div>
             <a id="iconoBusqueda"><img alt="icono de buscar" class="header_busqueda-imagenLupa" src="<?php echo URL; ?>img/iconoLupa.png"></a>
             <a class="header_busqueda-SignUp" href="<?php echo URL; ?>registro">Registro</a> |

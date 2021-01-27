@@ -17,7 +17,3 @@ function ocultar() {
 function mostrar() {
     document.getElementById('busqueda').style.display = 'inline';
 }
-
-document.getElementById('buttonBusqueda').addEventListener('click', () => {
-    location.href='../busqueda';
-})
