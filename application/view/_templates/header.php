@@ -15,7 +15,7 @@
             </a>
         </div>
         <div class="header_busqueda">
-            <a href="../busqueda/index.html"><img alt="icono de buscar" class="header_busqueda-imagenLupa" src="<?php echo URL; ?>img/iconoLupa.png"></a>
+            <a href="<?php echo URL; ?>busqueda"><img alt="icono de buscar" class="header_busqueda-imagenLupa" src="<?php echo URL; ?>img/iconoLupa.png"></a>
             <a class="header_busqueda-SignUp" href="<?php echo URL; ?>registro">Sign up</a> |
             <button class="header_busqueda-buttonLogin" id="Login">Login</button>
         </div>

@@ -1,0 +1,49 @@
+main{
+    max-width: 1200px;
+    margin: 50px auto;
+    border-radius: 5px;
+    box-shadow: 1px 1px 4px grey;
+}
+
+main h1{
+    width: 70%;
+    margin: 20px auto;
+    text-align: center;
+    padding: 15px;
+    font-size: 3em;
+    border-bottom: 1px solid grey;
+    color: rgb(80, 79, 79);
+}
+
+div.images-container{
+    display: flex;
+    align-items: center;
+}
+
+div.images-container div{
+    margin: 25px;
+}
+
+div.images-container div img{
+    max-width: 100%;
+    border-radius: 5px;
+    box-shadow: 1px 1px 4px grey;
+}
+
+main p{
+    padding: 0 15px;
+    margin: 5px 0;
+    color: rgb(80, 79, 79);
+}
+
+/******MEDIA QUERIES*******/
+
+
+@media screen and (max-width: 715px){
+    div.images-container{
+        display: block;
+    }
+    main h1{
+        font-size: 5vw;
+    }
+}

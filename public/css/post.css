@@ -1,0 +1,151 @@
+.post{
+    max-width: 1200px;
+    margin: 50px auto;
+    border-radius: 5px;
+    box-shadow: 1px 1px 4px grey;
+}
+
+.post-titulo {
+    align-items: center;
+    color: rgb(80, 79, 79);
+    display: flex;
+    font-size: x-large;
+    justify-content: center;
+}
+
+.post_container {
+    color: rgb(80, 79, 79);
+    display: flex;
+    flex-direction: row;
+}
+
+.post_container-imagen {
+    margin: 25px;
+}
+
+.post_container-imagen > img {
+    border-radius: 5px;
+    box-shadow: 1px 1px 4px grey;
+}
+
+.post_container-text {
+    display: flex;
+    flex-direction: column;
+    margin: 2vh 2vw;
+}
+
+.comments {
+    border-radius: 5px;
+    box-shadow: 1px 1px 4px grey;    
+    margin: 50px auto;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.comments_container {
+    display: flex;
+    flex-direction: column;
+}
+
+.comments_container > div {
+    border-radius: 5px;
+    box-shadow: 1px 1px 4px grey;
+    margin: 3vh;
+    padding: 2vh;
+    display: flex;
+    flex-direction: row;
+    text-align: justify;
+    word-wrap: break-word;
+}
+
+.comments-title {
+    width: fit-content;
+    align-self: center;
+    box-shadow: none;
+    border-collapse: collapse;
+}
+
+.comments_container > div > .perfil {
+    display: flex;
+    flex-direction: column;
+    font-size: small;
+    margin: 0.8vh;
+    text-align: center;
+    word-wrap: break-word;
+    width: 5%;
+}
+
+.comments_container > div > .perfil > img {
+    border-radius: 50vw;
+    height: 8vh;
+    width: 4vw;
+}
+
+.comment_containt > label{
+    
+}
+
+#commentAdder {
+    position:relative;
+}
+
+.fake-textarea {
+    border-bottom: 1px solid;
+    margin: 0.8vh;
+    max-width: 70vw;
+    padding: .5rem;
+    min-height: 3rem;
+}
+
+.fake-textarea:empty::before {
+    content: "Escribe aquí tu comentario...";
+}
+
+#commentAreaInvisible {
+    display: none;
+}
+
+#sendCommentButton {
+    border-radius: 2px;
+    border: none;
+    height: 8vh;
+    margin-top: 30%;
+    margin-left: 4vh;
+    margin-right: 0.8vh;
+    background-color:  #ff7e67;
+    color: white;
+    font-family: sans-serif;
+}
+
+@media screen and (max-width: 715px) {
+    .post_container {
+        flex-direction: column;
+    }
+
+    .post_container-imagen > img {
+        max-width: 100%;
+    }
+
+    .comments_container > div > .perfil > img {
+        height: 4vh;
+        width: 6vw;
+    }
+
+    .comments_container > div > .perfil {
+        text-align: left;
+        margin: 0.6vh;
+        width: 10vw;
+    }
+
+    .fake-textarea {
+        max-width: 45vw;
+    }
+
+    #sendCommentButton {
+        margin-left: 2vh;
+    }
+
+    .comments_container > div {
+        font-size: small;
+    }
+}
