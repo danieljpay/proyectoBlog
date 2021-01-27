@@ -2,6 +2,7 @@
 
 class About extends Controller{
     public $MODULE = "about";
+    public $TITLE = "Sobre Mí";
 
     public function index(){
         require APP . 'view/_templates/header.php';

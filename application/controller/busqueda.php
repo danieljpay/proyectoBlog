@@ -2,6 +2,7 @@
 
 class Busqueda extends Controller{
     public $MODULE = "busqueda";
+    public $TITLE = "Resultados de tu búsqueda";
 
     public function index(){
         require APP . 'view/_templates/header.php';

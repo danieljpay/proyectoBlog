@@ -2,6 +2,7 @@
 
 class Inicio extends Controller{
     public $MODULE = "inicio";
+    public $TITLE = "Home";
 
     public function index(){
         require APP . 'view/_templates/header.php';

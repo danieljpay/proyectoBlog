@@ -2,6 +2,7 @@
 
 class Post extends Controller{
     public $MODULE = "post";
+    public $TITLE = "Publicación";
 
     public function index(){
         require APP . 'view/_templates/header.php';
