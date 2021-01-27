@@ -15,9 +15,13 @@
             </a>
         </div>
         <div class="header_busqueda">
-            <a href="<?php echo URL; ?>busqueda"><img alt="icono de buscar" class="header_busqueda-imagenLupa" src="<?php echo URL; ?>img/iconoLupa.png"></a>
-            <a class="header_busqueda-SignUp" href="<?php echo URL; ?>registro">Sign up</a> |
-            <button class="header_busqueda-buttonLogin" id="Login">Login</button>
+        <div id="busqueda">
+                <input id="inputBusqueda" type="text" />
+                <button id="buttonBusqueda">Buscar</button>
+            </div>
+            <a id="iconoBusqueda"><img alt="icono de buscar" class="header_busqueda-imagenLupa" src="<?php echo URL; ?>img/iconoLupa.png"></a>
+            <a class="header_busqueda-SignUp" href="<?php echo URL; ?>registro">Registro</a> |
+            <a class="header_busqueda-buttonLogin" href="<?php echo URL; ?>login">Login</a>
         </div>
     </header>
     <nav class="navegacion">

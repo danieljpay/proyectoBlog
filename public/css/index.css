@@ -10,10 +10,36 @@ header {
     justify-content: space-between;
 }
 
+button, a{
+    cursor: pointer;
+}
+
 .header_logo-imagenLogo {
     height: 110px;
     margin-left: 80px;
     width: 120px;
+}
+
+#busqueda {
+    display: none;
+}
+
+#inputBusqueda {
+    border-radius: 10px;
+    border-style: initial black;
+    height: 22px;
+    outline: none;
+    width: 8vw;
+}
+
+#buttonBusqueda {
+    border-radius: 10px;
+    border-style: initial;
+    background-color: #ff7e67;
+    color: white;
+    height: 30px;
+    outline: none;
+    width: 65px;
 }
 
 .header_busqueda {
@@ -22,7 +48,7 @@ header {
     flex-direction: row;
     justify-content: space-around;
     margin-right: 100px;
-    width: 300px;
+    width: 450px;
 }
 
 .header_busqueda-imagenLupa {
@@ -35,14 +61,17 @@ header {
     text-decoration: none;
 }
 
-.header_busqueda-buttonLogin {
+a.header_busqueda-buttonLogin{
     border-radius: 10px;
     border-style: initial;
     background-color: #ff7e67;
     color: white;
     height: 30px;
-    outline: none;
     width: 72px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    padding-top: 5px;
 }
 
 /************ Barra de navegación ***************/
