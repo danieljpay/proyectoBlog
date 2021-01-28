@@ -13,7 +13,7 @@
                         <div class="post-container">
                             <h3>'.$post->title.'</h3>
                             <p>'.$post->description.'</p>
-                            <a href="'.URL.'post">Ver publicación...</a>
+                            <a href="'.URL.'post/view/'.$post->_id.'">Ver publicación...</a>
                         </div>
                     </article>
                 ';
