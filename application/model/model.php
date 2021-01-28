@@ -72,4 +72,16 @@ class Model
         $json = json_decode($response);
         return $json;
     }
+
+    public function queryComments($id_post){
+        $sql = "SELECT idcomments, user_email, comment, posted FROM comments WHERE idpost = :idpost";
+        
+        $query = $this->db->prepare($sql);
+        $parameters = array(
+            ":idpost" => $id_post,
+        );
+        $query->execute($parameters);
+
+        return $query->fetchAll();
+    }  
 }

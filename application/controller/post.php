@@ -26,4 +26,13 @@ class Post extends Controller{
         require APP . 'view/_templates/footer.php';
     }
 
+    //Funcion que es consumida por ajax
+    public function getComentarios(){
+        $request = json_decode(file_get_contents("php://input"));
+        $id_post = $request->id_post;
+
+        $response = $this->model->queryComments($id_post);
+        return json_encode($response);
+    }
+
 }
