@@ -8,11 +8,11 @@
             <div class="post_container_form_inputs">
                 <div>
                     <label for="">Correo:</label>
-                    <input id="email-input" name="email" type="text">
+                    <input id="email-input" name="email" type="text" required>
                 </div>
                 <div>
                     <label for="">Contraseña:</label>
-                    <input id="password-input" name="password" type="password">
+                    <input id="password-input" name="password" type="password" required>
                 </div>
             </div>
             <div class="post_container_form_button">

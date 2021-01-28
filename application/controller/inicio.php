@@ -13,6 +13,7 @@ class Inicio extends Controller{
         require APP . 'view/_templates/footer.php';
     }
 
+    //Llamar a la API externa del CMS para traer los posts
     private function getAllPosts(){
         $curl = curl_init();
         curl_setopt_array($curl, array(

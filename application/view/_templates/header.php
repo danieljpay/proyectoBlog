@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,8 +25,18 @@
                 </form>
             </div>
             <a id="iconoBusqueda"><img alt="icono de buscar" class="header_busqueda-imagenLupa" src="<?php echo URL; ?>img/iconoLupa.png"></a>
-            <a class="header_busqueda-SignUp" href="<?php echo URL; ?>registro">Registro</a> |
-            <a class="header_busqueda-buttonLogin" href="<?php echo URL; ?>login">Login</a>
+            <?php
+                if(isset($_SESSION["user"])){
+                    echo '
+                        <a class="header_busqueda-buttonLogin" href="'.URL.'"perfil>Perfil</a>
+                    ';
+                }else{
+                    echo '
+                        <a class="header_busqueda-SignUp" href="'.URL.'registro">Registro</a> |
+                        <a class="header_busqueda-buttonLogin" href="'.URL.'login">Login</a>
+                    ';
+                }
+            ?>
         </div>
     </header>
     <nav class="navegacion">

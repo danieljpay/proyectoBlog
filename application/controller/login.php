@@ -27,11 +27,13 @@ class Login extends Controller{
         if(count($user) == 1 && $user[0]->email == $_POST["email"]){
             session_start();
             $_SESSION['user'] = $user[0]->email;
-            header("Location: ".URL.'inicio');
+            header("Location: ".URL);
 
         }else{
             header("Location: ".URL.'login?error=1');
         }
+
+        exit();
     }
     
 }
