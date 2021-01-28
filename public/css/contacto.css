@@ -23,6 +23,8 @@
 }
 
 #description {
+    width: 18vw;
+    margin-left: 20px;
 }
 
 .post_container_form_inputs > div {

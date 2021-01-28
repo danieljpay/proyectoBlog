@@ -17,10 +17,6 @@
                         <input type="text">
                     </div>
                     <div>
-                        <label>Usuario</label>
-                        <input type="text">
-                    </div>
-                    <div>
                         <label>Correo</label>
                         <input type="text">
                     </div>
