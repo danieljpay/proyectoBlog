@@ -15,7 +15,7 @@ class Model
     }
 
     public function registro($name, $lastname, $email, $password){
-        $sql = "INSERT INTO users (email, first_name, last_name, password) VALUES (:email, :first_name, :last_name, :password)";
+        $sql = "INSERT INTO user (email, first_name, last_name, password) VALUES (:email, :first_name, :last_name, :password)";
 
         $query = $this->db->prepare($sql);
         $parameters = array(
@@ -29,12 +29,24 @@ class Model
     }
 
     public function login($email, $password){
-        $sql = "SELECT email, first_name FROM users WHERE email = :email AND password = :password";
+        $sql = "SELECT email, first_name FROM user WHERE email = :email AND password = :password";
         
         $query = $this->db->prepare($sql);
         $parameters = array(
             ":email" => $email,
             ":password" => sha1($password)
+        );
+        $query->execute($parameters);
+
+        return $query->fetchAll();
+    }
+
+    public function getUsuario($email){
+        $sql = "SELECT email FROM user WHERE email = :email";
+        
+        $query = $this->db->prepare($sql);
+        $parameters = array(
+            ":email" => $email,
         );
         $query->execute($parameters);
 

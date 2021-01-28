@@ -54,8 +54,8 @@ define('URL_CMS', URL_DOMAIN.'/cockpit');
  * This is the place where you define your database credentials, database type etc.
  */
 define('DB_TYPE', 'mysql');
-define('DB_HOST', '127.0.0.1');
-define('DB_NAME', 'blog-db');
-define('DB_USER', 'root');
-define('DB_PASS', '');
+define('DB_HOST', 'us-cdbr-east-03.cleardb.com');
+define('DB_NAME', 'heroku_c3009abf4c34cd2');
+define('DB_USER', 'bcd7f76101c011');
+define('DB_PASS', '1152769e');
 define('DB_CHARSET', 'utf8');

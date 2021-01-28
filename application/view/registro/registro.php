@@ -4,6 +4,7 @@
             <div class="post_container_form-titulo">
                 <h2>Registro</h2>
             </div>
+            <p class="error"><?php echo isset($error_message) ? $error_message : ''; ?><p>
             <div class="post_container_form_inputs">
                 <div>
                     <label>Nombre</label>

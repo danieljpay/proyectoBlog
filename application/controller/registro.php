@@ -6,6 +6,17 @@ class Registro extends Controller{
     public $TITLE = "Registro";
 
     public function index(){
+        if(isset($_GET["error"])){
+            switch($_GET["error"]){
+                case 1:
+                    $error_message = "El correo utilizado ya está en uso";
+                break;
+
+                case 2:
+                    $error_message = "Error de servidor";
+                break;
+            }
+        }
         require APP . 'view/_templates/header.php';
         require APP . 'view/registro/registro.php';
         require APP . 'view/_templates/footer.php';
@@ -17,12 +28,21 @@ class Registro extends Controller{
         $email = $_POST["email"];
         $password = $_POST["password"];
 
-        $result = $this->model->registro($first_name, $last_name, $email, $password);
+        $usuario = $this->model->getUsuario($email);
 
-        if($result){
-            echo "Registro exitoso";
+        if(count($usuario) == 1 && $usuario[0]->email == $email){
+            header("Location: ".URL.'registro?error=1');
+
         }else{
-            echo "Fallo el registro";
+            $registro = $this->model->registro($first_name, $last_name, $email, $password);
+
+            if($registro){
+                header("Location: ".URL.'login');
+            }else{
+                header("Location: ".URL.'registro?error=2');
+            }
         }
+
+        exit();
     }
 }
