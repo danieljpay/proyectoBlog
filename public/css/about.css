@@ -30,10 +30,11 @@ div.images-container div img{
     box-shadow: 1px 1px 4px grey;
 }
 
-main p{
-    padding: 0 15px;
+main pre{
+    padding: 70px;
     margin: 5px 0;
     color: rgb(80, 79, 79);
+    white-space: pre-wrap;
 }
 
 /******MEDIA QUERIES*******/
@@ -45,5 +46,8 @@ main p{
     }
     main h1{
         font-size: 5vw;
+    }
+    main pre{
+        padding: 30px;
     }
 }
