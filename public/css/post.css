@@ -15,23 +15,28 @@
 
 .post_container {
     color: rgb(80, 79, 79);
-    display: flex;
-    flex-direction: row;
 }
 
 .post_container-imagen {
     margin: 25px;
+    display: flex;
+    justify-content: center;
 }
 
 .post_container-imagen > img {
     border-radius: 5px;
     box-shadow: 1px 1px 4px grey;
+    max-width: 50vw;
+    margin: 0 auto;
 }
 
 .post_container-text {
-    display: flex;
-    flex-direction: column;
     margin: 2vh 2vw;
+}
+
+.post_container-text pre{
+    white-space: pre-wrap;
+    padding: 50px;
 }
 
 .comments {
@@ -118,6 +123,9 @@
 }
 
 @media screen and (max-width: 715px) {
+    .post_container-text pre{
+        padding: 15px;
+    }
     .post_container {
         flex-direction: column;
     }
