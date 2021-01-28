@@ -28,7 +28,7 @@ session_start();
             <?php
                 if(isset($_SESSION["user"])){
                     echo '
-                        <a class="header_busqueda-buttonLogin" href="'.URL.'"perfil>Perfil</a>
+                        <a class="header_busqueda-buttonLogin" href="'.URL.'perfil"perfil>Perfil</a>
                     ';
                 }else{
                     echo '
