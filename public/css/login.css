@@ -13,15 +13,22 @@
 
 .post_container_form_inputs > div > input {
     width: 16vw;
+    margin: 10px 5px;
 }
 
 .post_container_form_button {
     height: 4vh;
-    margin-bottom: 10vh;
+    margin: 20px 0;
 }
 
 .post_container_form-button {
     border-radius: 10px;
+    height: 30px;
+    width: 90px;
+    outline: none;
+    background-color: #ff7e67;
+    border-style: none;
+    color: white;
 }
 
 @media (max-width: 600px) {

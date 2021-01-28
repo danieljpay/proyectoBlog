@@ -71,7 +71,7 @@ a.header_busqueda-buttonLogin{
     text-align: center;
     text-decoration: none;
     text-transform: none;
-    padding-top: 5px;
+    padding-top: 7px;
 }
 
 /************ Barra de navegación ***************/
@@ -135,6 +135,13 @@ a.header_busqueda-buttonLogin{
     margin-right: 8px;
     height: 16px;
     width: 16px
+}
+
+.error{
+    color: red;
+    font-weight: bold;
+    font-size: smaller;
+    font-style: italic;
 }
 
 /************* media ****************/
