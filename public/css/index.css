@@ -168,3 +168,9 @@ a.header_busqueda-buttonLogin{
         display: none;
     }
 }
+
+@media print {
+    * {
+        font-size: large;
+    }
+}

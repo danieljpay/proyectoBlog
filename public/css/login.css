@@ -36,3 +36,9 @@
         margin-right: 0.2vw;
     }
 }
+
+@media print {
+    * {
+        font-size: large;
+    }
+}

@@ -77,3 +77,18 @@
         width: 35vw;
     }
 }
+
+@media print {
+    * {
+        font-size: large;
+    }
+
+    .posts_container_form {
+        border: none;
+        margin: 0vh 3vw;
+    }
+
+    .post_container_form-button {
+        width: 15vw;
+    }
+}

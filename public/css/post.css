@@ -142,6 +142,7 @@
     .post_container-text pre{
         padding: 15px;
     }
+
     .post_container {
         flex-direction: column;
     }
@@ -171,5 +172,36 @@
 
     .comments_container > div {
         font-size: small;
+    }
+}
+
+@media print {
+    * {
+        font-size: large;
+    }
+
+    .post {
+        box-shadow: none;
+    }
+
+    .post-print > button {
+        margin-bottom: 0vh;
+    }
+
+    .comments {
+        box-shadow: none;    
+    }
+
+    .comments_container > div {
+        box-shadow: none;
+    }
+
+    #commentAdder {
+        display: none;
+    }
+
+    .comments_container > div > .perfil > img {
+        height: 5vh;
+        width: 6vw;
     }
 }

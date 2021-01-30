@@ -55,3 +55,9 @@ main{
         font-size: 5vw;
     }
 }
+
+@media print {
+    * {
+        font-size: large;
+    }
+}

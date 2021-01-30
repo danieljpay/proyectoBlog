@@ -94,3 +94,14 @@
         text-align: justify;
     }
 }
+
+@media print {
+    * {
+        font-size: large;
+    }
+
+    .posts_container_form {
+        border: none;
+        margin-bottom: 1vh;
+    }
+}
