@@ -14,7 +14,7 @@ session_start();
     <header>
         <div class="header_logo">
             <a href="<?php echo URL; ?>inicio">
-                <img class="header_logo-imagenLogo" src="https://scontent.fmid1-2.fna.fbcdn.net/v/t1.0-9/116343728_183186249897592_7872352272283125949_n.jpg?_nc_cat=106&ccb=2&_nc_sid=8bfeb9&_nc_eui2=AeEM4VG5wuIOg1rECOfVrTaFXFMpF1P_NYFcUykXU_81gaHrdnYk_wVVBZjyrIXlqrM2A8SYAy6q2in4krnyAp9t&_nc_ohc=-2UQdY84-BIAX8P702f&_nc_ht=scontent.fmid1-2.fna&oh=2ee861b4863fb067df71a1df11660677&oe=60108201" alt="Imagen Intra salud">
+                <img class="header_logo-imagenLogo" src="https://scontent.fmex32-1.fna.fbcdn.net/v/t1.0-9/116343728_183186249897592_7872352272283125949_n.jpg?_nc_cat=106&ccb=2&_nc_sid=8bfeb9&_nc_eui2=AeEM4VG5wuIOg1rECOfVrTaFXFMpF1P_NYFcUykXU_81gaHrdnYk_wVVBZjyrIXlqrM2A8SYAy6q2in4krnyAp9t&_nc_ohc=x9f0qWskwkUAX_jFCJk&_nc_ht=scontent.fmex32-1.fna&oh=aa59765a5939a6e402f8c84a4b2180f6&oe=603C0381" alt="Imagen Intra salud">
             </a>
         </div>
         <div class="header_busqueda">
