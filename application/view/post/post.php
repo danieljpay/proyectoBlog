@@ -3,16 +3,19 @@
         <div class="post-titulo">
             <h2><?php echo $post->title ?></h2>
         </div>
-        <div class="post_container">
+        <div class="post_container" id="postContent">
             <div class="post_container-imagen">
                 <img 
                     src="<?php echo URL_PROTOCOL.URL_CMS.'/storage/uploads'.$post->image->path; ?>" 
                     alt="Imagen principal de la publicación"
                 >
             </div>
-            <div class="post_container-text">
+            <div id="postText" class="post_container-text">
                <pre><?php echo $post->content ?></pre>
             </div>
+        </div>
+        <div class="post-print">
+            <button id="printPostButton">Imprimir publicación</button>
         </div>
     </div>
     <div class="comments">
