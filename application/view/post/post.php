@@ -1,7 +1,7 @@
 <main >
     <div class="post">
         <div class="post-titulo">
-            <h2><?php echo $post->title ?></h2>
+            <h2 id=Tittle><?php echo $post->title ?></h2>
         </div>
         <div class="post_container" id="postContent">
             <div class="post_container-imagen">

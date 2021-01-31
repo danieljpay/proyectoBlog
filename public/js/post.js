@@ -1,3 +1,35 @@
+window.onload = function () {
+        
+    var postTittle = document.getElementById("Tittle").innerHTML;
+    postTittle =  sanitizeText(postTittle);
+    if (localStorage.getItem("history")) {
+        var historyString = leerCookie("history");
+        historyString += postTittle+";";
+        document.cookie = "history="+historyString;
+        localStorage.setItem("history",localStorage.getItem("history")+postTittle+";")
+    }else{
+        console.log(postTittle);
+        console.log("Hola");
+        document.cookie = "history="+postTittle;
+        localStorage.setItem("history",postTittle+";");
+    }
+};
+
+function leerCookie(nombre) {
+    var lista = document.cookie.split(";");
+    for (i in lista) {
+        var busca = lista[i].search(nombre);
+        if (busca > -1) {
+            micookie=lista[i]
+        }else {
+            return;
+        }
+    }
+    var igual = micookie.indexOf("=");
+    var valor = micookie.substring(igual+1);
+    return valor;
+}
+
 const printPostButton = document.getElementById('printPostButton');
 
 printPostButton.addEventListener('click', () => {
