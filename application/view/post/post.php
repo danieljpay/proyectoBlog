@@ -92,7 +92,7 @@
                 <div>
                     <input id="inputFile" type="file">
                     <br/><br/>
-                    <button style="height:3vh;width:6vw;" id="btnEnviar">Enviar</button>
+                    <button id="btnEnviar">Enviar</button>
                 </div>
             </div>
             

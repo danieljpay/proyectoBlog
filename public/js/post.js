@@ -65,7 +65,6 @@ function addComment (){
             return "";
         }
     }
-
     if (comment.textContent.length > 0) {
         commentContainer.innerHTML += '<div>' + 
         '<div class="perfil">' +
@@ -84,6 +83,8 @@ function addComment (){
         comment.textContent = "";
         fakeTextArea.textContent  = "";
     }
+    inputFile.value = "";
+    alert("todo correcto");
 };
 
 function sanitizeText (comment){

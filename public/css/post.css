@@ -127,15 +127,16 @@
 }
 
 #sendCommentButton {
-    border-radius: 2px;
+    border-radius: 10px;
     border: none;
-    height: 8vh;
-    margin-top: 30%;
+    height: 6vh;
+    margin-top: 10%;
     margin-left: 4vh;
     margin-right: 0.8vh;
     background-color:  #ff7e67;
     color: white;
     font-family: sans-serif;
+    width: 7vw;
 }
 
 @media screen and (max-width: 715px) {
