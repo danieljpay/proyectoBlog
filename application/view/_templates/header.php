@@ -36,11 +36,7 @@ session_start();
                 >
             </a>
             <?php
-                if(isset($_SESSION["user"])){
-                    echo '
-                        <a class="header_busqueda-buttonLogin" href="'.URL.'perfil"perfil>Perfil</a>
-                    ';
-                }else{
+                if(!isset($_SESSION["user"])){
                     echo '
                         <a class="header_busqueda-SignUp" href="'.URL.'registro">Registro</a> |
                         <a class="header_busqueda-buttonLogin" href="'.URL.'login">Login</a>

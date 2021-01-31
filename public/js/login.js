@@ -2,7 +2,7 @@ const loginbutton = document.getElementById('login-btn');
 const email = document.getElementById('email-input').value;
 const password = document.getElementById('password-input').value;
 
-loginbutton.addEventListener('click', function(e){
+/* loginbutton.addEventListener('click', function(e){
     fetch(location.href + '/iniciarSesion', {
         method: "POST",
         body: JSON.stringify({
@@ -17,4 +17,4 @@ loginbutton.addEventListener('click', function(e){
     .then(json => console.log(json))
     .catch(err => console.log(err));
 });
-
+ */

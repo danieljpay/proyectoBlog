@@ -74,7 +74,7 @@ class Model
     }
 
     public function queryComments($id_post){
-        $sql = "SELECT idcomments, user_email, comment, posted FROM comments WHERE idpost = :idpost";
+        $sql = "SELECT idcomments, email, first_name, last_name, comment, posted, file_dir FROM user_comments WHERE idpost = :idpost";
         
         $query = $this->db->prepare($sql);
         $parameters = array(
@@ -83,5 +83,20 @@ class Model
         $query->execute($parameters);
 
         return $query->fetchAll();
-    }  
+    }
+    
+    public function insertComment($data){
+        $sql = "INSERT INTO comments (user_email, idpost, comment, posted, file_dir) VALUES (:user_email, :idpost, :comment, :posted, :file_dir)";
+
+        $query = $this->db->prepare($sql);
+        $parameters = array(
+            ':user_email' => $data["user_email"],
+            ':idpost' => $data["idpost"],
+            ':comment' => $data["comment"],
+            ':posted' => $data["posted"],
+            ':file_dir' => $data["file_dir"]
+        );
+
+        return $query->execute($parameters);
+    }
 }

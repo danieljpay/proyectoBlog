@@ -30,9 +30,21 @@ class Post extends Controller{
     public function getComentarios(){
         $request = json_decode(file_get_contents("php://input"));
         $id_post = $request->id_post;
-
         $response = $this->model->queryComments($id_post);
-        return json_encode($response);
+        echo json_encode($response);
     }
 
+    public function enviarComentario(){
+        $request = json_decode(file_get_contents("php://input"));
+        $parameters = array(
+            'user_email' => $request->user,
+            'idpost' => $request->idpost,
+            'comment' => $request->comment,
+            'posted' => date('Y-m-d H:i:s'),
+            'file_dir' => $request->file_dir
+        );
+
+        $response = $this->model->insertComment($parameters);
+        echo json_encode($response);
+    }
 }

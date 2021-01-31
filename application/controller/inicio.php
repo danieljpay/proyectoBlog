@@ -23,4 +23,12 @@ class Inicio extends Controller{
         $response = $this->model->getCollectionEntries("posts", $filter);
         $this->posts = $response->entries;
     }
+
+    public function logout(){
+        session_destroy();
+        $_SESSION = array();
+        print_r($_SESSION);
+        header("Location: ".URL.'inicio');
+        exit();
+    }
 }
