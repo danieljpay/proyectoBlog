@@ -108,7 +108,9 @@
         btnEnviar.addEventListener("click", () => {
             if (inputFile.files.length > 0) {
                 let formData = new FormData();
-                formData.append("archivo", inputFile.files[0]); // En la posición 0; es decir, el primer elemento
+                var file = inputFile.files[0];
+                formData.append("nombre", file.name.replace(/ /g,'_'));
+                formData.append("archivo", file); // En la posición 0; es decir, el primer elemento
                 fetch("<?php echo URL; ?>uploader", {
                     method: 'POST',
                     body: formData,
@@ -116,10 +118,14 @@
                     .then(respuesta => respuesta.text())
                     .then(decodificado => {
                         console.log(decodificado);
+                        var lastFileUploaded = file.name.replace(/ /g,'_');
+                        setLastFileLoaded(lastFileUploaded);
                     });
+                    
             } else {
                 // El usuario no ha seleccionado archivos
                 alert("Selecciona un archivo");
             }
+            
         });
     </script>

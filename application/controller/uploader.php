@@ -1,7 +1,9 @@
 <?php
 
 $archivo = $_FILES["archivo"];
-$resultado = move_uploaded_file($archivo["tmp_name"], "img/" . $archivo["name"]);
+$nombre = $_POST["nombre"];
+
+$resultado = move_uploaded_file($archivo["tmp_name"], "uploaded/" . $nombre);
 if ($resultado) {
     echo "Subido con éxito";
 } else {
