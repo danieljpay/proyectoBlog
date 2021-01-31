@@ -64,7 +64,7 @@
         <div class="comments_container" id="commentAdder">
             <div style="display:flex;flex-direction:column;">
                 <div style="display:flex; flex-direction:row;">
-                    <div class="perfil">
+                    <div class="perfil" style="display:flex;flex-direction:column;">
                         <img src="<?php echo URL;?>img/userAnonimus.jpg" alt="">
                         <label for="">Usuario anonimo</label>
                     </div>
