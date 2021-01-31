@@ -75,8 +75,7 @@
                             class="fake-textarea" 
                             id="fakeTextArea" 
                             oninput="document.querySelector('#commentAreaInvisible').textContent = this.innerText"
-                        >
-                        </div>
+                        ></div>
                         <!-- Real y oculto -->
                         <textarea id="commentAreaInvisible"></textarea>
                     </div>
@@ -120,6 +119,7 @@
                         console.log(decodificado);
                         var lastFileUploaded = file.name.replace(/ /g,'_');
                         setLastFileLoaded(lastFileUploaded);
+                        alert("El archivo "+lastFileUploaded+" ha sido subido correctamente");
                     });
                     
             } else {

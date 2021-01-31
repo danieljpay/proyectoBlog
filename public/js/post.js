@@ -42,31 +42,6 @@ printPostButton.addEventListener('click', () => {
     w.close();
 })
 
-/*const btnEnviar = document.querySelector("#btnEnviar");
-const inputFile = document.querySelector("#inputFile");
-btnEnviar.addEventListener("click", () => {
-    if (inputFile.files.length > 0) {
-        let formData = new FormData();
-        var file = inputFile.files[0]; // En la posición 0; es decir, el primer elemento
-        //console.log(file.name.replace(/ /g,'_'));
-        //debugger;
-        //formData.append("nombre", file.name.replace(/ /g,'_'));
-        formData.append("archivo", file); 
-        fetch("<?php echo URL; ?>uploader", {
-            method: 'POST',
-            body: formData,
-        })
-            .then(respuesta => respuesta.text())
-            .then(decodificado => {
-                console.log(decodificado);
-            });
-            lastFileUploaded = file.name.replace(/ /g,'_');
-    } else {
-        // El usuario no ha seleccionado archivos
-        alert("Selecciona un archivo");
-    }
-});*/
-
 var date = new Date();
 var day = date.getDate();
 var month = date.getMonth()+1;
@@ -83,6 +58,14 @@ function addComment (){
     var comment = document.getElementById("commentAreaInvisible");
     var fakeTextArea = document.getElementById("fakeTextArea");
 
+    function generateDownloadLink (){
+        if (lastFileUploaded!="") {
+            return '<br><a href=../../public/uploaded/' +lastFileUploaded+ ' download='+lastFileUploaded+'>'+lastFileUploaded+'</a>';
+        }else {
+            return "";
+        }
+    }
+
     if (comment.textContent.length > 0) {
         commentContainer.innerHTML += '<div>' + 
         '<div class="perfil">' +
@@ -92,10 +75,12 @@ function addComment (){
         '<div class="comment_containt">' +
             '<p>' + sanitizeText(comment.textContent) + '</p>' +
             '<label for="">' + day + '/' + month + '/' + year + '</label>' +
-            '<br>' +
-            '<a href=../../public/uploaded/' +lastFileUploaded+ ' download='+lastFileUploaded+'>Descargar Archivo</a>' + 
+
+            generateDownloadLink() +
+        
         '</div>' +
         '</div>' 
+        lastFileUploaded = "";
         comment.textContent = "";
         fakeTextArea.textContent  = "";
     }
