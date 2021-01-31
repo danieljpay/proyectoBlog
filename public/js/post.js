@@ -84,7 +84,6 @@ function addComment (){
         fakeTextArea.textContent  = "";
     }
     inputFile.value = "";
-    alert("todo correcto");
 };
 
 function sanitizeText (comment){
