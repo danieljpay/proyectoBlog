@@ -113,7 +113,7 @@
 .fake-textarea {
     border-bottom: 1px solid;
     margin: 0.8vh;
-    max-width: 70vw;
+    max-width: 35vw;
     padding: .5rem;
     min-height: 3rem;
 }

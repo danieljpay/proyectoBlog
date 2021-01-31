@@ -62,37 +62,40 @@
         </div>
 
         <div class="comments_container" id="commentAdder">
-            <div>
-                <div class="perfil">
-                    <img src="<?php echo URL;?>img/userAnonimus.jpg" alt="">
-                    <label for="">Usuario anonimo</label>
-                </div>
-                <div class="comment_containt">
-                    <!-- Falso y edita el usuario -->
-                    <div 
-                        contenteditable 
-                        class="fake-textarea" 
-                        id="fakeTextArea" 
-                        oninput="document.querySelector('#commentAreaInvisible').textContent = this.innerText"
-                    >
+            <div style="display:flex;flex-direction:column;">
+                <div style="display:flex; flex-direction:row;">
+                    <div class="perfil">
+                        <img src="<?php echo URL;?>img/userAnonimus.jpg" alt="">
+                        <label for="">Usuario anonimo</label>
                     </div>
-                    <!-- Real y oculto -->
-                    <textarea id="commentAreaInvisible"></textarea>
+                    <div class="comment_containt">
+                        <!-- Falso y edita el usuario -->
+                        <div 
+                            contenteditable 
+                            class="fake-textarea" 
+                            id="fakeTextArea" 
+                            oninput="document.querySelector('#commentAreaInvisible').textContent = this.innerText"
+                        >
+                        </div>
+                        <!-- Real y oculto -->
+                        <textarea id="commentAreaInvisible"></textarea>
+                    </div>
+                    <div>
+                        <input 
+                            type="button" 
+                            value="Enviar" 
+                            name="sendCommentButton" 
+                            id="sendCommentButton" 
+                            onclick="javascript:addComment()"
+                        >
+                    </div>
                 </div>
                 <div>
-                    <input 
-                        type="button" 
-                        value="Enviar" 
-                        name="sendCommentButton" 
-                        id="sendCommentButton" 
-                        onclick="javascript:addComment()"
-                    >
+                    <input id="inputFile" type="file">
+                    <br/><br/>
+                    <button style="height:3vh;width:6vw;" id="btnEnviar">Enviar</button>
                 </div>
             </div>
-
-            <input id="inputFile" type="file">
-            <br><br>
-            <button id="btnEnviar">Enviar</button>
             
         </div>
 
